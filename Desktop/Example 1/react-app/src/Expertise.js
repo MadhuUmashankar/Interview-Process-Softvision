@@ -51,15 +51,15 @@ class Expertise extends React.Component {
                             </select></th>
                         <th className="col-sm-4">Score</th></tr>
                       <tr>
-                        <td className="col-sm-4"> {this.state.rows.map(this.eachRow)}</td>
-                        <td className="col-sm-2"> {this.state.rows.map(this.eachRow)}</td>
-                        <td className="col-sm-2"> {this.state.rows.map(this.eachRow)}</td>
+                        <td className="col-sm-4" id="expertisedArea"> {this.state.rows.map(this.eachRow)}</td>
+                        <td className="col-sm-2" id="jobSelect"> {this.state.rows.map(this.eachRow)}</td>
+                        <td className="col-sm-2" id="Score"> {this.state.rows.map(this.eachRow)}</td>
                         <td className="col-sm-4"></td>
                       </tr>
                   </tbody>
               </table>
             <button className="btn btn-primary pull-left margin-tiny" onClick={(i)=>this.addNewRow(i)}>Add new row</button>
-            <button className="btn btn-teritiary pull-left" onClick={()=>{ handleDelete()} }>Remove a row </button>
+            <button className="btn btn-teritiary pull-left margin-tiny" onClick={()=>{ handleDelete()} }>Remove a row </button>
 
       </div>
     )

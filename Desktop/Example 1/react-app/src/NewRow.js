@@ -1,13 +1,23 @@
 import React from 'react';
 
 class NewRow extends React.Component {
-    render () {
-      console.log('inside NewRow')
-      return (
+  constructor(props){
+    super(props)
+    this.state = {
+      value: ''
+    }
+  }
 
-        <form className="form-inline">
-          <input type="text" />
-          </form>
+  handleInputChange(event) {
+    this.setState({
+      value: event.target.value
+    })
+  }
+    render () {
+      return (
+        <div className="form-inline">
+          <input type="text" onChange={(event)=>{this.handleInputChange(event)}} value={this.state.value} autofocus/>
+        </div>
 
       )
     }
